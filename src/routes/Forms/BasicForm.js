@@ -154,33 +154,33 @@ export default class BasicForms extends PureComponent {
                 </span>
               }
             >
-              {getFieldDecorator('weight')(<InputNumber placeholder="请输入" min={0} max={100} />)}
+              {getFieldDecorator('weight')(<InputNumber placeholder="Please enter" min={0} max={100} />)}
               <span className="ant-form-text">%</span>
             </FormItem>
-            <FormItem {...formItemLayout} label="目标公开" help="客户、邀评人默认被分享">
+            <FormItem {...formItemLayout} label="Target disclosure" help="Something weird about client invites">
               <div>
                 {getFieldDecorator('public', {
                   initialValue: '1',
                 })(
                   <Radio.Group>
-                    <Radio value="1">公开</Radio>
-                    <Radio value="2">部分公开</Radio>
-                    <Radio value="3">不公开</Radio>
+                    <Radio value="1">Public</Radio>
+                    <Radio value="2">Semi Public</Radio>
+                    <Radio value="3">Private</Radio>
                   </Radio.Group>
                 )}
                 <FormItem style={{ marginBottom: 0 }}>
                   {getFieldDecorator('publicUsers')(
                     <Select
                       mode="multiple"
-                      placeholder="公开给"
+                      placeholder="Public"
                       style={{
                         margin: '8px 0',
                         display: getFieldValue('public') === '2' ? 'block' : 'none',
                       }}
                     >
-                      <Option value="1">同事甲</Option>
-                      <Option value="2">同事乙</Option>
-                      <Option value="3">同事丙</Option>
+                      <Option value="1">Option A</Option>
+                      <Option value="2">Option B</Option>
+                      <Option value="3">Option C</Option>
                     </Select>
                   )}
                 </FormItem>
@@ -188,9 +188,9 @@ export default class BasicForms extends PureComponent {
             </FormItem>
             <FormItem {...submitFormLayout} style={{ marginTop: 32 }}>
               <Button type="primary" htmlType="submit" loading={submitting}>
-                提交
+                submit
               </Button>
-              <Button style={{ marginLeft: 8 }}>保存</Button>
+              <Button style={{ marginLeft: 8 }}>Save</Button>
             </FormItem>
           </Form>
         </Card>
