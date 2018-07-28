@@ -270,7 +270,7 @@ class AdvancedForm extends PureComponent {
         <FooterToolbar>
           {getErrorInfo()}
           <Button type="primary" onClick={validate} loading={submitting}>
-            提交
+            Submit
           </Button>
         </FooterToolbar>
       </PageHeaderLayout>
