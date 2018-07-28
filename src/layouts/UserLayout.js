@@ -10,24 +10,24 @@ import { getRoutes, getPageQuery, getQueryPath } from '../utils/utils';
 const links = [
   {
     key: 'help',
-    title: '帮助',
+    title: 'help',
     href: '',
   },
   {
     key: 'privacy',
-    title: '隐私',
+    title: 'privacy',
     href: '',
   },
   {
     key: 'terms',
-    title: '条款',
+    title: 'terms',
     href: '',
   },
 ];
 
 const copyright = (
   <Fragment>
-    Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+    Copyright <Icon type="copyright" /> 2018 Hugah Inc.
   </Fragment>
 );
 
@@ -60,10 +60,10 @@ class UserLayout extends React.PureComponent {
               <div className={styles.header}>
                 <Link to="/">
                   <img alt="logo" className={styles.logo} src={logo} />
-                  <span className={styles.title}>Ant Design</span>
+                  <span className={styles.title}>Hugah</span>
                 </Link>
               </div>
-              <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+              <div className={styles.desc}>Hotel manager</div>
             </div>
             <Switch>
               {getRoutes(match.path, routerData).map(item => (
