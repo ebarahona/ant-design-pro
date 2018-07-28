@@ -15,7 +15,7 @@ class Step3 extends React.PureComponent {
       <div className={styles.information}>
         <Row>
           <Col xs={24} sm={8} className={styles.label}>
-            付款账户：
+           Payment account:
           </Col>
           <Col xs={24} sm={16}>
             {data.payAccount}
@@ -23,7 +23,7 @@ class Step3 extends React.PureComponent {
         </Row>
         <Row>
           <Col xs={24} sm={8} className={styles.label}>
-            收款账户：
+            Accounts Receiable:
           </Col>
           <Col xs={24} sm={16}>
             {data.receiverAccount}
@@ -31,7 +31,7 @@ class Step3 extends React.PureComponent {
         </Row>
         <Row>
           <Col xs={24} sm={8} className={styles.label}>
-            收款人姓名：
+           Payee Name:
           </Col>
           <Col xs={24} sm={16}>
             {data.receiverName}
@@ -39,10 +39,10 @@ class Step3 extends React.PureComponent {
         </Row>
         <Row>
           <Col xs={24} sm={8} className={styles.label}>
-            转账金额：
+           Transfer Amount:
           </Col>
           <Col xs={24} sm={16}>
-            <span className={styles.money}>{data.amount}</span> 元
+            <span className={styles.money}>{data.amount}</span> USD
           </Col>
         </Row>
       </div>
@@ -50,16 +50,16 @@ class Step3 extends React.PureComponent {
     const actions = (
       <Fragment>
         <Button type="primary" onClick={onFinish}>
-          再转一笔
+          Place another
         </Button>
-        <Button>查看账单</Button>
+        <Button>View bill</Button>
       </Fragment>
     );
     return (
       <Result
         type="success"
-        title="操作成功"
-        description="预计两小时内到账"
+        title="Success"
+        description="Your payment should arrive in two hours"
         extra={information}
         actions={actions}
         className={styles.result}
