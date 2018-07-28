@@ -12,27 +12,27 @@ import styles from './Workplace.less';
 
 const links = [
   {
-    title: '操作一',
+    title: 'One',
     href: '',
   },
   {
-    title: '操作二',
+    title: 'Two',
     href: '',
   },
   {
-    title: '操作三',
+    title: 'Three',
     href: '',
   },
   {
-    title: '操作四',
+    title: 'Four',
     href: '',
   },
   {
-    title: '操作五',
+    title: 'Five',
     href: '',
   },
   {
-    title: '操作六',
+    title: 'Six',
     href: '',
   },
 ];
