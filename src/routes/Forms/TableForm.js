@@ -221,7 +221,7 @@ export default class TableForm extends PureComponent {
               <a onClick={e => this.toggleEditable(e, record.key)}>edit</a>
               <Divider type="vertical" />
               <Popconfirm title="Do you want to delete this？" onConfirm={() => this.remove(record.key)}>
-                <a>delte</a>
+                <a>delete</a>
               </Popconfirm>
             </span>
           );
