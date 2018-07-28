@@ -63,65 +63,65 @@ export default class BasicForms extends PureComponent {
 
     return (
       <PageHeaderLayout
-        title="基础表单"
-        content="表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。"
+        title="Basic form"
+        content="Form pages are used to collect or verify information"
       >
         <Card bordered={false}>
           <Form onSubmit={this.handleSubmit} hideRequiredMark style={{ marginTop: 8 }}>
-            <FormItem {...formItemLayout} label="标题">
+            <FormItem {...formItemLayout} label="title">
               {getFieldDecorator('title', {
                 rules: [
                   {
                     required: true,
-                    message: '请输入标题',
+                    message: 'Please enter title',
                   },
                 ],
-              })(<Input placeholder="给目标起个名字" />)}
+              })(<Input placeholder="Give the target data a name" />)}
             </FormItem>
-            <FormItem {...formItemLayout} label="起止日期">
+            <FormItem {...formItemLayout} label="Start and end date">
               {getFieldDecorator('date', {
                 rules: [
                   {
                     required: true,
-                    message: '请选择起止日期',
+                    message: 'Please select start end date',
                   },
                 ],
-              })(<RangePicker style={{ width: '100%' }} placeholder={['开始日期', '结束日期']} />)}
+              })(<RangePicker style={{ width: '100%' }} placeholder={['Start date', 'End date']} />)}
             </FormItem>
-            <FormItem {...formItemLayout} label="目标描述">
+            <FormItem {...formItemLayout} label="Target description">
               {getFieldDecorator('goal', {
                 rules: [
                   {
                     required: true,
-                    message: '请输入目标描述',
+                    message: 'Please enter the description of the goal',
                   },
                 ],
               })(
                 <TextArea
                   style={{ minHeight: 32 }}
-                  placeholder="请输入你的阶段性工作目标"
+                  placeholder="Please enter work goals"
                   rows={4}
                 />
               )}
             </FormItem>
-            <FormItem {...formItemLayout} label="衡量标准">
+            <FormItem {...formItemLayout} label="Metrics">
               {getFieldDecorator('standard', {
                 rules: [
                   {
                     required: true,
-                    message: '请输入衡量标准',
+                    message: 'Enter metrics',
                   },
                 ],
-              })(<TextArea style={{ minHeight: 32 }} placeholder="请输入衡量标准" rows={4} />)}
+              })(<TextArea style={{ minHeight: 32 }} placeholder="Enter metrics" rows={4} />)}
             </FormItem>
             <FormItem
               {...formItemLayout}
               label={
                 <span>
-                  客户
+                  client
                   <em className={styles.optional}>
-                    （选填）
-                    <Tooltip title="目标的服务对象">
+                    （optional）
+                    <Tooltip title="target service">
                       <Icon type="info-circle-o" style={{ marginRight: 4 }} />
                     </Tooltip>
                   </em>
@@ -129,20 +129,20 @@ export default class BasicForms extends PureComponent {
               }
             >
               {getFieldDecorator('client')(
-                <Input placeholder="请描述你服务的客户，内部客户直接 @姓名／工号" />
+                <Input placeholder="Describe customer type，internal customer Name／Job" />
               )}
             </FormItem>
             <FormItem
               {...formItemLayout}
               label={
                 <span>
-                  邀评人
-                  <em className={styles.optional}>（选填）</em>
+                  Inviting critics
+                  <em className={styles.optional}>（optional）</em>
                 </span>
               }
             >
               {getFieldDecorator('invites')(
-                <Input placeholder="请直接 @姓名／工号，最多可邀请 5 人" />
+                <Input placeholder="Please enter name and job number" />
               )}
             </FormItem>
             <FormItem
