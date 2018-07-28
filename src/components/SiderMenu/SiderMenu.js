@@ -81,7 +81,6 @@ export default class SiderMenu extends PureComponent {
   }
 
   /**
-   * 判断是否是http链接.返回 Link 或 a
    * Judge whether it is http link.return a or Link
    * @memberof SiderMenu
    */
@@ -151,7 +150,6 @@ export default class SiderMenu extends PureComponent {
   };
 
   /**
-   * 获得菜单子节点
    * @memberof SiderMenu
    */
   getNavMenuItems = menusData => {
@@ -177,7 +175,6 @@ export default class SiderMenu extends PureComponent {
   };
 
   // conversion Path
-  // 转化路径
   conversionPath = path => {
     if (path && path.indexOf('http') === 0) {
       return path;
@@ -235,7 +232,7 @@ export default class SiderMenu extends PureComponent {
       >
         <div className={styles.logo} key="logo">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="Hugah Logo" />
             <h1>Hugah</h1>
           </Link>
         </div>
