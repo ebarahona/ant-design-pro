@@ -44,16 +44,16 @@ class Step2 extends React.PureComponent {
           message="After confirming the transfer, the funds will be directly credited to the other party's account and cannot be returned."
           style={{ marginBottom: 24 }}
         />
-        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Payment account">
+        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Account">
           {data.payAccount}
         </Form.Item>
-        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Accounts Receivable">
+        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Receiver">
           {data.receiverAccount}
         </Form.Item>
-        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Payee name">
+        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Receiver Name">
           {data.receiverName}
         </Form.Item>
-        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Transfer amount">
+        <Form.Item {...formItemLayout} className={styles.stepFormText} label="Amount">
           <span className={styles.money}>{data.amount}</span>
           <span className={styles.uppercase}>
             （
