@@ -120,7 +120,7 @@ export default class PageHeader extends PureComponent {
           {
             [linkElement === 'a' ? 'href' : 'to']: '/',
           },
-          '首页'
+          'Home'
         )}
       </Breadcrumb.Item>
     );
@@ -132,7 +132,6 @@ export default class PageHeader extends PureComponent {
   };
 
   /**
-   * 将参数转化为面包屑
    * Convert parameters into breadcrumbs
    */
   conversionBreadcrumbList = () => {
@@ -141,7 +140,6 @@ export default class PageHeader extends PureComponent {
     if (breadcrumbList && breadcrumbList.length) {
       return this.conversionFromProps();
     }
-    // 如果传入 routes 和 params 属性
     // If pass routes and params attributes
     if (routes && params) {
       return (
@@ -154,7 +152,6 @@ export default class PageHeader extends PureComponent {
         />
       );
     }
-    // 根据 location 生成 面包屑
     // Generate breadcrumbs based on location
     if (routerLocation && routerLocation.pathname) {
       return this.conversionFromLocation(routerLocation, breadcrumbNameMap);
