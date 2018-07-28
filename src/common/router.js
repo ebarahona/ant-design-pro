@@ -85,7 +85,7 @@ export const getRouterData = app => {
         import('../routes/Dashboard/Workplace')
       ),
       // hideInBreadcrumb: true,
-      // name: '工作台',
+      // name: 'workbench',
       // authority: 'admin',
     },
     '/form/basic-form': {
@@ -95,15 +95,15 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm')),
     },
     '/form/step-form/info': {
-      name: '分步表单（填写转账信息）',
+      name: 'Steb-by-step form（fill in the data）',
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm/Step1')),
     },
     '/form/step-form/confirm': {
-      name: '分步表单（确认转账信息）',
+      name: 'step-by-step（confirm）',
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm/Step2')),
     },
     '/form/step-form/result': {
-      name: '分步表单（完成）',
+      name: 'step-by-step（result）',
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm/Step3')),
     },
     '/form/advanced-form': {
