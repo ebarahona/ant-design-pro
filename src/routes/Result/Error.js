@@ -39,7 +39,7 @@ export default () => (
     <Card bordered={false}>
       <Result
         type="error"
-        title="提交失败"
+        title="Submission failed"
         description="请核对并修改以下信息后，再重新提交。"
         extra={extra}
         actions={actions}
