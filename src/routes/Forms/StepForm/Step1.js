@@ -37,16 +37,16 @@ class Step1 extends React.PureComponent {
           <Form.Item {...formItemLayout} label="Payment type">
             {getFieldDecorator('payAccount', {
               initialValue: data.payAccount,
-              rules: [{ required: true, message: 'Please select a payment type' }],
+              rules: [{ required: true, message: 'Please select account' }],
             })(
               <Select placeholder="test@example.com">
                 <Option value="ant-design@alipay.com">ant-design@alipay.com</Option>
               </Select>
             )}
           </Form.Item>
-          <Form.Item {...formItemLayout} label="Payment services">
+          <Form.Item {...formItemLayout} label="Account">
             <Input.Group compact>
-              <Select defaultValue="alipay" style={{ width: 100 }}>
+              <Select defaultValue="Stripe" style={{ width: 100 }}>
                 <Option value="Stripe">Stripe</Option>
                 <Option value="Paypal">Paypal</Option>
               </Select>
@@ -59,13 +59,13 @@ class Step1 extends React.PureComponent {
               })(<Input style={{ width: 'calc(100% - 100px)' }} placeholder="test@example.com" />)}
             </Input.Group>
           </Form.Item>
-          <Form.Item {...formItemLayout} label="Payee Name">
+          <Form.Item {...formItemLayout} label="Receiver">
             {getFieldDecorator('receiverName', {
               initialValue: data.receiverName,
               rules: [{ required: true, message: 'Please enter the payee name' }],
             })(<Input placeholder="Please enter the payee name" />)}
           </Form.Item>
-          <Form.Item {...formItemLayout} label="transfer amount">
+          <Form.Item {...formItemLayout} label="Amount">
             {getFieldDecorator('amount', {
               initialValue: data.amount,
               rules: [
@@ -97,11 +97,11 @@ class Step1 extends React.PureComponent {
           <h3>Description</h3>
           <h4>Transfer to Stripe account</h4>
           <p>
-           If you need to, here are some common problem descriptions about the product. If you need to, here are some common problem descriptions about the product. If you need to, here are some common questions about the product.
+           Add support information to help the user better understand the process.
           </p>
           <h4>Transfer to account</h4>
           <p>
-           Enter more information about the step and description.
+           Additional information and terms can go here.
           </p>
         </div>
       </Fragment>
