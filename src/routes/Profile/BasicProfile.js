@@ -9,33 +9,33 @@ const { Description } = DescriptionList;
 
 const progressColumns = [
   {
-    title: '时间',
+    title: 'time',
     dataIndex: 'time',
     key: 'time',
   },
   {
-    title: '当前进度',
+    title: 'rate',
     dataIndex: 'rate',
     key: 'rate',
   },
   {
-    title: '状态',
+    title: 'status',
     dataIndex: 'status',
     key: 'status',
     render: text =>
       text === 'success' ? (
-        <Badge status="success" text="成功" />
+        <Badge status="success" text="success" />
       ) : (
-        <Badge status="processing" text="进行中" />
+        <Badge status="processing" text="processing" />
       ),
   },
   {
-    title: '操作员ID',
+    title: 'operator',
     dataIndex: 'operator',
     key: 'operator',
   },
   {
-    title: '耗时',
+    title: 'cost',
     dataIndex: 'cost',
     key: 'cost',
   },
@@ -82,7 +82,7 @@ export default class BasicProfile extends Component {
     };
     const goodsColumns = [
       {
-        title: '商品编号',
+        title: 'ID',
         dataIndex: 'id',
         key: 'id',
         render: (text, row, index) => {
@@ -98,26 +98,26 @@ export default class BasicProfile extends Component {
         },
       },
       {
-        title: '商品名称',
+        title: 'name',
         dataIndex: 'name',
         key: 'name',
         render: renderContent,
       },
       {
-        title: '商品条码',
+        title: 'barcode',
         dataIndex: 'barcode',
         key: 'barcode',
         render: renderContent,
       },
       {
-        title: '单价',
+        title: 'price',
         dataIndex: 'price',
         key: 'price',
         align: 'right',
         render: renderContent,
       },
       {
-        title: '数量（件）',
+        title: 'num',
         dataIndex: 'num',
         key: 'num',
         align: 'right',
@@ -129,7 +129,7 @@ export default class BasicProfile extends Component {
         },
       },
       {
-        title: '金额',
+        title: 'amount',
         dataIndex: 'amount',
         key: 'amount',
         align: 'right',
@@ -142,7 +142,7 @@ export default class BasicProfile extends Component {
       },
     ];
     return (
-      <PageHeaderLayout title="基础详情页">
+      <PageHeaderLayout title="Basic details page">
         <Card bordered={false}>
           <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
             <Description term="取货单号">1000000000</Description>
