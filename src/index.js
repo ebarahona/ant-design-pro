@@ -5,7 +5,7 @@ import createHistory from 'history/createHashHistory';
 // user BrowserHistory
 // import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
-import 'moment/locale/en-us';
+import 'moment';
 import './rollbar';
 
 import './index.less';
