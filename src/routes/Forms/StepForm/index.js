@@ -31,12 +31,12 @@ export default class StepForm extends PureComponent {
       <PageHeaderLayout
         title="Step-by-step form"
         tabActiveKey={location.pathname}
-        content="Divide a lengthy or unfamiliar form task into multiple steps to guide the user through the process."
+        content="A multi step form task helps users better understand a process."
       >
         <Card bordered={false}>
           <Fragment>
             <Steps current={this.getCurrentStep()} className={styles.steps}>
-              <Step title="Fill in the transfer information" />
+              <Step title="Enter transfer info" />
               <Step title="Confirm the transfer" />
               <Step title="Complete transaction" />
             </Steps>
