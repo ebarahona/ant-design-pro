@@ -74,7 +74,7 @@ export default class GlobalHeader extends PureComponent {
           <Icon type="user" />Profile
         </Menu.Item>
         <Menu.Item disabled>
-          <Icon type="setting" />Setting
+          <Icon type="setting" />Settings
         </Menu.Item>
         <Menu.Item key="triggerError">
           <Icon type="close-circle" />Trigger error
@@ -133,14 +133,14 @@ export default class GlobalHeader extends PureComponent {
             popupAlign={{ offset: [20, -16] }}
           >
             <NoticeIcon.Tab
-              list={noticeData['通知']}
+              list={noticeData['Notice']}
               title="Notice"
               emptyText="You have viewed all notifications"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
             />
             <NoticeIcon.Tab
-              list={noticeData['news']}
-              title="news"
+              list={noticeData['News']}
+              title="News"
               emptyText="You have read all the messages"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
             />
